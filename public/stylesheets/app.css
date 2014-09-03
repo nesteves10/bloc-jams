@@ -11,10 +11,6 @@ body {
 body.landing {
   background: #5b5579; }
 
-.hero-content {
-  background: #2f1d57;
-  padding: 100px; }
-
 .hero-content h1 {
   font-size: 70px;
   margin-bottom: 50px;
@@ -38,10 +34,22 @@ body.landing {
 .selling-points .point p {
   font-size: 14px; }
 
-.nav-bar {
-  background: #2c1231;
-  height: 90px;
-  padding: 0 100px; }
+.player-header-nav {
+  background-color: rgba(123, 70, 163, 0.9); }
+
+body.landing .navbar {
+  margin-bottom: 0; }
+
+.hero-content {
+  background: #2f1d57;
+  padding: 100px 0; }
+
+.selling-points {
+  padding: 100px 0; }
+
+.album-header-container {
+  margin-top: 55px;
+  margin-bottom: 40px; }
 
 
 /*# sourceMappingURL=app.css.map*/
