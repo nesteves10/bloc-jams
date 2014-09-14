@@ -422,7 +422,7 @@ body.landing {
 
  .play-pause .fa-play:hover {
   background: red;
-  transition: all .15s ease-in-out;
+  transition: opacity .15s ease-in-out;
  }
  
  .player-bar .queue-toggle {
