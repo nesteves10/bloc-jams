@@ -20,8 +20,7 @@ body {
    background: #5B5579;
    padding-bottom: 0;
  }
-<<<<<<< HEAD
-=======
+
 
 .hero-content h1 {
   font-size: 70px;
@@ -214,8 +213,12 @@ body.landing {
   opacity: .15;
  }
 
+ .play-pause .fa-play {
+  transition: opacity .15s ease-in-out;
+ }
+
  .play-pause .fa-play:hover {
-  opacity: .15;
+  opacity: .3;
  }
 
  .next .fa-forward:hover {
