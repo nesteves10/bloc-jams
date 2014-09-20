@@ -261,6 +261,23 @@ var setupSeekBars = function() {
 // require('./album');
 // require('./profile');
 
+ // Example album.
+ var albumPicasso = {
+   name: 'The Colors',
+   artist: 'Pablo Picasso',
+   label: 'Cubism',
+   year: '1881',
+   albumArtUrl: '/images/album-placeholder.png',
+ 
+   songs: [
+       { name: 'Blue', length: '4:26' },
+       { name: 'Green', length: '3:14' },
+       { name: 'Red', length: '5:01' },
+       { name: 'Pink', length: '3:21'},
+       { name: 'Magenta', length: '2:15'}
+     ]
+ };
+
 blocJams = angular.module('BlocJams', ['ui.router']);
   blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
    $locationProvider.html5Mode(true);
@@ -270,6 +287,13 @@ blocJams = angular.module('BlocJams', ['ui.router']);
      controller: 'Landing.controller',
      templateUrl: '/templates/landing.html'
    });
+
+   $stateProvider.state('collection', {
+     url: '/collection',
+     controller: 'Collection.controller',
+     templateUrl: '/templates/collection.html'
+   });
+   
  }]);
   blocJams.controller('Landing.controller', ['$scope', function($scope) {
   console.log("Landing.controller");
@@ -291,6 +315,13 @@ blocJams = angular.module('BlocJams', ['ui.router']);
    ];
    
 }]);
+
+   blocJams.controller('Collection.controller', ['$scope', function($scope) {
+   $scope.albums = [];
+   for (var i = 0; i < 33; i++) {
+     $scope.albums.push(angular.copy(albumPicasso));
+   }
+ }]);
 });
 
 ;require.register("scripts/collection", function(exports, require, module) {
